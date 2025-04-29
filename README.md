@@ -25,24 +25,22 @@ No need for a virtual environment as it only contains small functions.<br />
 # Installation method
 ### Simple installation
 ```
-bash
-cd (folder you want)
-git clone https://github.com/Strawberry-dreams/discord_bot.git
-cd discord_bot
-pip install -r requirements.txt
+  bash
+  cd (folder you want)
+  git clone https://github.com/Strawberry-dreams/discord_bot.git
+  cd discord_bot
+  pip install -r requirements.txt
 ```
 ### Direct installation
 ```
-bash
-cd (folder you want)
-git clone https://github.com/Strawberry-dreams/discord_bot.git
-cd discord_bot
-pip install discord.py
-pip install python-dotenv
+  bash
+  cd (folder you want)
+  git clone https://github.com/Strawberry-dreams/discord_bot.git
+  cd discord_bot
+  pip install discord.py
+  pip install python-dotenv
 ```
-<br />
 # How to use
-<br />
 You can use the prefix command (default is *)<br />
 The forbidden word filter runs automatically.<br />
 Discord bot tokens can be written directly or set in a .env file, and server environment variables can also be registered.<br />
