@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 # 이벤트 모듈 (채널 ID 포함)
 # ===========================
 
-EVENT_CHANNEL_ID = 1336536074444603456 # 여기에 고정
+EVENT_CHANNEL_ID = 1365885232489955428 # 여기에 고정
 
 def setup_event_commands(bot):
     
