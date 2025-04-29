@@ -57,7 +57,7 @@ For certain files, a specific channel ID on the server is required. (Discord dev
 (Local) Open Windows cmd / MacOS Terminal
 ```
   cd ~/discord_bot
-  python main.py
+  python (file_name) of main.py
 ```
 (For Korea) 24-hour free operation using Cloudtype Free Tier (stopped once a day)<br />
 (For Overseas) Use of services such as AWS, Oracle Cloud, Heroku, Railway, and etc.<br />
