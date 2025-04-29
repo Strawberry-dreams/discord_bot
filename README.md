@@ -8,7 +8,7 @@ makeparty_module.py: Party recruitment and participation functions<br />
 prohibition_module.py: Banned word filtering function<br />
 <br />
 # How to use
-The files here work alone.<br /> <- 변경
+The files here are executed simultaneously through the main.py file.<br />
 You can use the prefix command (default is *)<br />
 The forbidden word filter runs automatically.<br />
 Discord bot tokens can be entered directly or set in a .env file, and can be registered as server environment variables.<br />
