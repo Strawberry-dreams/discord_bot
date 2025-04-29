@@ -19,6 +19,7 @@ Detects words that you designate as banned words and outputs a warning message.<
 # What you need
 Python 3.13 or later<br />
 Python libraries including discord.py, git, pip, python-dotenv<br />
+A Discord bot for legitimate use created on the Discord Developer Portal.
 Server platform to deploy the Discord bot<br />
 No need for a virtual environment as it only contains small functions.<br />
 <br />
