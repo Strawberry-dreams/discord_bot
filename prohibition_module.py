@@ -21,8 +21,6 @@ def load_banned_words():
 def register_prohibition_filter(bot):
     intents = discord.Intents.default()
     intents.message_content = True
-    bot = commands.Bot(command_prefix='*', intents=intents)
-
     banned_words = load_banned_words()
 
     @bot.event
