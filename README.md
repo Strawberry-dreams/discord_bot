@@ -3,7 +3,7 @@
 A simple Discord bot that can be used on private servers.<br />
 (Main) branch is the origin of all branches.<br />
 (Single) branch contains one-time files that output embedded messages.<br />
-(Module) branch contains persistent functionality files that need to run on the server.<br />
+(Module) branch contains continuous functionality files that need to run on the server.<br />
 <br />
 The discord_bot repository started out as a collection of personal files for use on my own servers.<br />
 More features may be added in the future.<br />
