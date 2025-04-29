@@ -58,5 +58,5 @@ The list of banned words can be created as a .txt file or registered as an envir
   python main.py
 ```
 (For Korea) 24-hour free operation using Cloudtype Free Tier (stopped once a day)<br />
-(For overseas) Use of services such as AWS, Oracle Cloud, Heroku, Railway, and etc.<br />
+(For Overseas) Use of services such as AWS, Oracle Cloud, Heroku, Railway, and etc.<br />
 <br />
