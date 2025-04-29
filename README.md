@@ -8,10 +8,11 @@ makeparty_module.py: Party recruitment and participation functions<br />
 prohibition_module.py: Banned word filtering function<br />
 <br />
 # How to use
-he files here are executed simultaneously through the main.py file.<br />
+The files here work alone.<br /> <- 변경
 You can use the prefix command (default is *)<br />
 The forbidden word filter runs automatically.<br />
-The list of banned words can be created as a .txt file or registered as an environment variable on the server.<br />
+Discord bot tokens can be entered directly or set in a .env file, and can be registered as server environment variables.<br />
+The list of banned words can be created as a .txt file or can be registered as server environment variables.<br />
 For certain files, a specific channel ID on the server is required. (Discord developer mode needed)<br />
 <br />
 # Deployment method
