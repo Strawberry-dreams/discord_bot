@@ -12,7 +12,11 @@ def load_banned_words():
     if not banned_words_raw:
         print("⚠️ 금칙어 목록이 존재하지 않습니다.")
         return []
-    return json.loads(banned_words_raw)
+    try:
+        return json.loads(banned_words_raw)
+    except json.JSONDecodeError:
+        print("❌ BANNED_WORDS 환경 변수의 JSON 포맷이 잘못되었습니다.")
+        return []
 
 def register_prohibition_filter(bot):
     intents = discord.Intents.default()
