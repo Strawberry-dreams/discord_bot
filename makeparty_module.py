@@ -5,7 +5,7 @@ import discord
 from discord.ext import commands
 from discord.ui import View, Select, Button
 
-RECRUIT_CHANNEL_ID = 1360877145886429375 # 실제 모집 채널 ID로 교체
+RECRUIT_CHANNEL_ID = 1361245403147931669 # 실제 모집 채널 ID로 교체
 
 GAMES = {
     "League of Legends": {
