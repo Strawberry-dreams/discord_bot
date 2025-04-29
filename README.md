@@ -1,4 +1,4 @@
-![discord_icon](https://raw.githubusercontent.com/Strawberry-dreams/discord_bot/refs/heads/main/images/discord_icon.webp)
+![discord_icon](https://github.com/Strawberry-dreams/discord_bot/blob/main/images/discord_icon.png)
 # Discord Bot
 A simple Discord bot that can be used on private servers.<br />
 (Main) branch is the origin of all branches.<br />
