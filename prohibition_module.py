@@ -14,7 +14,7 @@ def load_banned_words():
         return []
     return json.loads(banned_words_raw)
 
-def create_bot():
+def register_prohibition_filter():
     intents = discord.Intents.default()
     intents.message_content = True
     bot = commands.Bot(command_prefix='*', intents=intents)
