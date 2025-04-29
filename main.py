@@ -4,7 +4,6 @@
 import discord
 import os
 from discord.ext import commands
-from dotenv import load_dotenv
 
 # 등록 함수 불러오기
 from makeparty_module import register_makeparty_commands
@@ -31,7 +30,6 @@ register_makeparty_commands(bot)
 register_prohibition_filter(bot)
 setup_event_commands(bot)
 
-load_dotenv(dotenv_path="DISCORD_TOKEN.env")
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot.run(TOKEN)
