@@ -45,6 +45,7 @@ You can use the prefix command (default is *)<br />
 The forbidden word filter runs automatically.<br />
 Discord bot tokens can be written directly or set in a .env file, and server environment variables can also be registered.<br />
 The list of banned words can be created as a .txt file or registered as an environment variable on the server.<br />
+For certain files, a specific channel ID on the server is required. (Discord developer mode needed)<br />
 <br />
 # Setting environment variables on the server
 |      KEY      |          VALUE         |<br />
