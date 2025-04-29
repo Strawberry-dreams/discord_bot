@@ -52,6 +52,11 @@ The list of banned words can be created as a .txt file or registered as an envir
 |  BANNED_WORDS | Banned words list (JSON string) |<br />
 <br />
 # Deployment method
+(Local) Open Windows cmd / MacOS Terminal
+```
+  cd ~/discord_bot
+  python main.py
+```
 (For Korea) 24-hour free operation using Cloudtype Free Tier (stopped once a day)<br />
 (For overseas) Use of services such as AWS, Oracle Cloud, Heroku, Railway, and etc.<br />
 <br />
