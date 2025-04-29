@@ -42,12 +42,14 @@ pip install python-dotenv
 ```
 <br />
 # How to use
+<br />
 You can use the prefix command (default is *)<br />
 The forbidden word filter runs automatically.<br />
 Discord bot tokens can be written directly or set in a .env file, and server environment variables can also be registered.<br />
 The list of banned words can be created as a .txt file or registered as an environment variable on the server.<br />
 <br />
 # Setting environment variables on the server
+<br />
 |      KEY      |          VALUE         |
 | DISCORD_TOKEN | Your Discord bot Token |
 |  BANNED_WORDS | Banned words list (JSON string) |
