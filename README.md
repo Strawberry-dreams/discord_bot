@@ -47,11 +47,11 @@ Discord bot tokens can be written directly or set in a .env file, and server env
 The list of banned words can be created as a .txt file or registered as an environment variable on the server.<br />
 <br />
 # Setting environment variables on the server
-<br />
-|      KEY      |          VALUE         |
-| DISCORD_TOKEN | Your Discord bot Token |
-|  BANNED_WORDS | Banned words list (JSON string) |
+|      KEY      |          VALUE         |<br />
+| DISCORD_TOKEN | Your Discord bot Token |<br />
+|  BANNED_WORDS | Banned words list (JSON string) |<br />
 <br />
 # Deployment method
 (For Korea) 24-hour free operation using Cloudtype Free Tier (stopped once a day)<br />
 (For overseas) Use of services such as AWS, Oracle Cloud, Heroku, Railway, and etc.<br />
+<br />
