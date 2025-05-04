@@ -24,11 +24,9 @@ class MyClient(discord.Client):
     async def setup_hook(self): # 모듈에서 명령어 등록
         await setup_event_commands(self)
         await setup_party_commands(self)
-        forbidfilter_module.reload_prohibited_words()
-        await forbitfilter_module.on_message_filter(message)
-        await bot.process.commands(message)
         self.banned_words = load_prohibited_words()
 
+        reload_prohibited_words()
         setup_filter_commands(self.tree)
         await self.tree.sync()
     
