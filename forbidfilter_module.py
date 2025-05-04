@@ -1,6 +1,7 @@
 # filter.py — 금지어 필터 기능 모듈화
 import discord
 import os
+import json
 from discord import app_commands
 from dotenv import load_dotenv
 
@@ -19,11 +20,14 @@ def load_prohibited_words():
 
 def load_prohibited_words():
     banned_words_env = os.getenv("BANNED_WORDS")
-    if not banned_words_env:
-        print("⚠️ 환경변수 'BANNED_WORDS'가 설정되어 있지 않습니다.")
+    if not banned_words_raw:
+        print("⚠️ 금칙어 목록이 존재하지 않습니다.")
         return []
-    return [word.strip().lower() for word in banned_words_env.split(",") if word.strip()]
-
+    try:
+        return json.loads(banned_words_raw)
+    except json.JSONDecodeError:
+        print("❌ BANNED_WORDS 환경 변수의 JSON 포맷이 잘못되었습니다.")
+        return []
 
 def reload_prohibited_words():
     global banned_words
