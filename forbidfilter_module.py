@@ -17,11 +17,11 @@ def load_prohibited_words():
 """
 
 def load_prohibited_words():
-    prohibited_words_env = os.getenv("BANNED_WORDS")
-    if not prohibited_words_env:
+    banned_words_env = os.getenv("BANNED_WORDS")
+    if not banned_words_env:
         print("⚠️ 환경변수 'BANNED_WORDS'가 설정되어 있지 않습니다.")
         return []
-    return [word.strip().lower() for word in prohibited_words_env.split(",") if word.strip()]
+    return [word.strip().lower() for word in banneded_words_env.split(",") if word.strip()]
 
 
 def reload_prohibited_words():
