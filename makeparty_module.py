@@ -2,7 +2,7 @@
 import discord
 from discord.ui import View, Select, Button
 
-RECRUIT_CHANNEL_ID = 1336536074444603456
+RECRUIT_CHANNEL_ID = 1361245403147931669
 
 GAMES = {
     "League of Legends": {
