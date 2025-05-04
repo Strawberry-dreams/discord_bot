@@ -5,6 +5,7 @@ from discord import app_commands
 banned_words = []
 
 # 금지어 로드 함수
+"""
 def load_prohibited_words():
     try:
         with open("prohibited_words.txt", "r", encoding="utf-8") as f:
@@ -12,6 +13,13 @@ def load_prohibited_words():
     except FileNotFoundError:
         print("⚠️ 금칙어 파일이 존재하지 않습니다.")
         return []
+"""
+def load_prohibited_words():
+    prohibited_words_env = os.getenv("BANNED_WORDS")
+    if not prohibited_words_env:
+        print("⚠️ 환경변수 'BANNED_WORDS'가 설정되어 있지 않습니다.")
+        return []
+    return [word.strip().lower() for word in prohibited_words_env.split(",") if word.strip()]
 
 def reload_prohibited_words():
     global banned_words
