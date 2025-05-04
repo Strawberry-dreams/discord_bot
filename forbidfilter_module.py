@@ -20,11 +20,11 @@ def load_prohibited_words():
 
 def load_prohibited_words():
     banned_words_env = os.getenv("BANNED_WORDS")
-    if not banned_words_raw:
+    if not banned_words_env:
         print("⚠️ 금칙어 목록이 존재하지 않습니다.")
         return []
     try:
-        return json.loads(banned_words_raw)
+        return json.loads(banned_words_env)
     except json.JSONDecodeError:
         print("❌ BANNED_WORDS 환경 변수의 JSON 포맷이 잘못되었습니다.")
         return []
