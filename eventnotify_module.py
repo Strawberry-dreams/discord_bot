@@ -2,7 +2,7 @@ import discord
 from datetime import datetime, timezone
 
 # 이벤트 채널 ID 제한
-EVENT_CHANNEL_ID = 1336536074444603456
+EVENT_CHANNEL_ID = 1365885232489955428
 
 # 명령어 등록 함수
 async def setup_event_commands(client: discord.Client):
