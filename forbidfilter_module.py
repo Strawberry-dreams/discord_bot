@@ -1,5 +1,6 @@
 # filter.py — 금지어 필터 기능 모듈화
 import discord
+import os
 from discord import app_commands
 
 banned_words = []
