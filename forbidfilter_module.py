@@ -21,7 +21,7 @@ def load_prohibited_words():
     if not banned_words_env:
         print("⚠️ 환경변수 'BANNED_WORDS'가 설정되어 있지 않습니다.")
         return []
-    return [word.strip().lower() for word in banneded_words_env.split(",") if word.strip()]
+    return [word.strip().lower() for word in banned_words_env.split(",") if word.strip()]
 
 
 def reload_prohibited_words():
