@@ -26,15 +26,15 @@ GAMES = {
     }
 }
 
-shared_views = {} # game_name -> View instance
+shared_views = {}
 party_status = {game: {"players": {}} for game in GAMES}
 user_parties = {}
 
+# Initializing the client and command tree
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 
-# Initializing the client and command tree
 tree = None
 class MyClient(discord.Client):
     def __init__(self):
