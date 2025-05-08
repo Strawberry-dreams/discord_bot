@@ -7,7 +7,7 @@ import discord
 import os
 from dotenv import load_dotenv
 
-# Import 
+# Import functions registered in a module
 from eventnotify_module import setup_event_commands
 from makeparty_module import setup_party_commands
 from forbidfilter_module import load_prohibited_words, reload_prohibited_words, on_message_filter, setup_filter_commands
@@ -50,3 +50,6 @@ class MyClient(discord.Client):
 client = MyClient()
 
 client.run(TOKEN)
+
+# Or directly enter the token here (not recommended for real deployments)
+# client.run("your_bot_token")
