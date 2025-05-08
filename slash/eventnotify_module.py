@@ -38,7 +38,8 @@ async def setup_event_commands(client: discord.Client):
         if index <= 0 or index > len(valid_events):
             await interaction.followup.send(f"❌ Incorrect number. Please enter betwennt (1 ~ {len(valid_events)})", ephemeral=True)
             return
-
+            
+        # Select from valid events
         event = valid_events[index - 1]
 
         embed = discord.Embed(
@@ -47,6 +48,7 @@ async def setup_event_commands(client: discord.Client):
             color=discord.Color.blue()
         )
 
+        # Show end-time timestamp
         if event.end_time:
             unix_timestamp = int(event.end_time.timestamp())
             remaining_str = f"<t:{unix_timestamp}:R>"
@@ -54,12 +56,15 @@ async def setup_event_commands(client: discord.Client):
             remaining_str = "No end-time information"
         embed.add_field(name="⏳ Time left until the end", value=remaining_str, inline=False)
 
+        # Show event creator
         creator_mention = event.creator.mention if event.creator else "Unknown"
         embed.add_field(name="👤 Event Creator", value=creator_mention, inline=False)
 
+        # Show event location
         if event.location:
             embed.add_field(name="📍 Event Location", value=event.location, inline=False)
 
+        # Insert cover image
         if event.cover_image:
             embed.set_image(url=event.cover_image.url)
 
