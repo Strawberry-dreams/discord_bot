@@ -35,29 +35,29 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 
-bot = commands.Bot(command_prefix='*', intents=intents)
+client = commands.Bot(command_prefix='*', intents=intents)
 
 # Set bot presence (only one can be active at a time)
-@bot.event
+@client.event
 async def on_ready():
-    print(f'✅ {bot.user} bot has connected to Discord!')
+    print(f'✅ {client.user} bot has connected to Discord!')
     
     activity = discord.Game(name="game_title") # Fix this part
     # activity = discord.Streaming(name="broadcast_title", url="broadcast_link")
     # activity = discord.Activity(type=discord.ActivityType.listening, name="music_title")
     # activity = discord.Activity(type=discord.ActivityType.watching, name="video_title")
 
-    await bot.change_presence(status=discord.Status.online, activity=activity)
-    # await bot.change_presence(status=discord.Status.idle, activity=activity)
-    # await bot.change_presence(status=discord.Status.dnd, activity=activity)
-    # await bot.change_presence(status=discord.Status.invisible, activity=activity)
+    await client.change_presence(status=discord.Status.online, activity=activity)
+    # await client.change_presence(status=discord.Status.idle, activity=activity)
+    # await client.change_presence(status=discord.Status.dnd, activity=activity)
+    # await client.change_presence(status=discord.Status.invisible, activity=activity)
 
 # To check if the correct channel is selected
 def ensure_recruit_channel(ctx):
     return ctx.channel_id == RECRUIT_CHANNEL_ID
 
 # Registering prefix commands
-@bot.command()
+@client.command()
 async def recruit(ctx):
     if not ensure_recruit_channel(ctx):
         await ctx.send("❌ This command can only be used in the recruit channel.", ephemeral=True)
@@ -83,7 +83,7 @@ async def recruit(ctx):
     view.add_item(GameSelect(ctx, available_games))
     await ctx.send(embed=embed, view=view)
 
-@bot.command()
+@client.command()
 async def exit(ctx):
     if not ensure_recruit_channel(ctx):
         await ctx.send("❌ This command can only be used in the recruit channel.", ephemeral=True)
@@ -104,7 +104,7 @@ async def exit(ctx):
     else:
         await ctx.send(f"👋 {ctx.author.display_name} left the `{game}` party.")
 
-@bot.command()
+@client.command()
 async def party(ctx):
     if not ensure_recruit_channel(ctx):
         await ctx.send("❌ This command can only be used in the recruit channel.", ephemeral=True)
@@ -163,7 +163,7 @@ async def party(ctx):
     else:
         await ctx.send("📭 There are currently no parties recruiting.")
 
-@bot.command()
+@client.command()
 async def change(ctx):
     if not ensure_recruit_channel(ctx):
         await ctx.send("❌ This command can only be used in the recruit channel.", ephemeral=True)
@@ -298,7 +298,7 @@ class RoleUpdateSelect(Select):
 load_dotenv(dotenv_path="DISCORD_TOKEN.env")
 TOKEN = os.getenv("DISCORD_TOKEN")
 
-bot.run(TOKEN)
+client.run(TOKEN)
 
 # 2. Or directly enter the token here (not recommended for real deployments)
-# bot.run("your_bot_token")
+# client.run("your_bot_token")
