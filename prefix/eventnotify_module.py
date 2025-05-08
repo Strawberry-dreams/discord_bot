@@ -19,7 +19,8 @@ def setup_event_commands(bot):
             return
 
         events = await ctx.guild.fetch_scheduled_events()
-
+        
+        # Filter only valid events
         now = datetime.now(timezone.utc)
         valid_events = [
             event for event in events
@@ -34,6 +35,7 @@ def setup_event_commands(bot):
             await ctx.send(f"❌ Incorrect number. Please enter betwennt (1 ~ {len(valid_events)})", ephemeral=True)
             return
 
+        # Select from valid events
         event = valid_events[index - 1]
 
         embed = discord.Embed(
@@ -42,6 +44,7 @@ def setup_event_commands(bot):
             color=discord.Color.blue()
         )
 
+        # Show end-time timestamp
         if event.end_time:
             unix_timestamp = int(event.end_time.timestamp())
             remaining_str = f"<t:{unix_timestamp}:R>"
@@ -49,17 +52,20 @@ def setup_event_commands(bot):
             remaining_str = "No end-time information"
 
         embed.add_field(name="⏳ Time left until the end", value=remaining_str, inline=False)
-
+        
+        # Show event creator
         if event.creator:
             creator_mention = event.creator.mention
         else:
             creator_mention = "Unknown"
 
         embed.add_field(name="👤 Event Creator", value=creator_mention, inline=False)
-
+        
+        # Show event location
         if event.location:
             embed.add_field(name="📍 Event Location", value=event.location, inline=False)
-
+            
+        # Insert cover image
         if event.cover_image:
             embed.set_image(url=event.cover_image.url)
 
